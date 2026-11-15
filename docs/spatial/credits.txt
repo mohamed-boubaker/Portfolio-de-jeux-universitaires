@@ -1,0 +1,21 @@
+JEU SPATIAL — PROJET UNIVERSITAIRE DE MOHAMED BOUBAKER
+
+Programme et images d'origine :
+https://github.com/mohamed-boubaker/Licence-1-Project-/tree/main/jeu-spatial-cpp-grapic
+Révision 83ca430799dcae3511a642ef5a5b783587c9b77d
+
+GRAPIC
+Alexandre Meyer et Elodie Desseree
+https://github.com/ucacaxm/grapic
+Révision 2e3e193e84676d33f9f4060b4d802137b655fb53
+GPL version 3 ou ultérieure. Les mentions de copyright sont conservées dans les sources.
+Texte de la licence : GPL-3.0.txt
+
+ROBOTO
+Font data copyright Google 2012
+Licensed under the Apache License, Version 2.0.
+Texte de la licence : Apache-2.0.txt
+
+Les sources correspondantes de cette version, la bibliothèque utilisée et les scripts de compilation sont disponibles dans spatial-source.zip sur cette page.
+
+Adaptation navigateur réalisée avec l'aide de ChatGPT.

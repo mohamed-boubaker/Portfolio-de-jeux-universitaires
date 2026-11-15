@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jouez à Géométrie Shark, le projet universitaire C++ et SDL2 de Mohamed Boubaker, directement dans votre navigateur.">
+  <title>Géométrie Shark · Mohamed Boubaker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="shark-page">
+<header class="top"><a class="identity" href="index.html"><span class="monogram">mb.</span><span>Mohamed Boubaker<small>PORTFOLIO INFORMATIQUE</small></span></a><nav class="page-nav"><a href="index.html">← Tous les jeux</a><a class="source-link" href="https://github.com/mohamed-boubaker/Licence-2-Project--/tree/main/geometrie-shark-cpp" target="_blank" rel="noopener">Code source ↗</a></nav></header>
+<main>
+  <div class="intro"><div><p class="eyebrow"><span></span> PROJET UNIVERSITAIRE · LICENCE 2</p><h1>Géométrie <em>Shark.</em></h1><p class="description">Un saut au bon moment. Une gravité qui change.<br>Traverse les obstacles et va jusqu’au bout du niveau.</p></div><div class="tech"><span>C++</span><span>SDL2</span><span>WebAssembly</span><p>Le jeu d’origine, dans ton navigateur.</p></div></div>
+  <div class="play-layout">
+    <section class="game-panel" aria-label="Jeu Géométrie Shark">
+      <div class="screen-top"><span><i></i> GEOMETRY SHARK</span><span id="screen-label">PRÊT À JOUER</span></div>
+      <div class="viewport" id="viewport">
+        <canvas id="canvas" width="800" height="600" tabindex="0" aria-label="Zone de jeu. A, Espace ou flèche du haut pour sauter. Échap pour le menu."></canvas>
+        <div class="cover" id="cover"><div class="cover-content"><span class="cover-tag">C++ / SDL2 · VERSION ORIGINALE</span><h2>Plonge dans<br>le jeu.</h2><p>Trois niveaux. Tes réflexes.<br>Et quelques surprises en chemin.</p><button id="launch" class="primary" disabled>Chargement du jeu…</button><p id="loading" class="load-status" role="status">Préparation du moteur C++…</p></div></div>
+        <div class="pause-overlay" id="pause-overlay" hidden><h2>Petite pause.</h2><button id="resume" class="primary">Reprendre le jeu ↗</button></div>
+        <div class="win" id="win" hidden>Bien joué ! <small>Niveau terminé · Retour au menu dans quelques secondes</small></div>
+      </div>
+      <div class="toolbar"><div><button id="pause" disabled aria-label="Mettre en pause">Ⅱ <span>Pause</span></button><button id="restart" disabled aria-label="Recommencer le niveau">↻ <span>Recommencer</span></button><button id="menu" disabled>← <span>Menu</span></button></div><div class="sound-controls"><button id="sound" aria-pressed="true" aria-label="Couper la musique (M)">♪ <span>Son activé</span></button><label class="volume-control" for="music-volume"><span>Volume</span><input id="music-volume" type="range" min="0" max="100" step="1" value="28" aria-label="Volume de la musique"></label><button id="fullscreen" aria-label="Afficher le jeu en plein écran">⛶ <span>Plein écran</span></button></div></div>
+      <div class="game-status"><span id="status-text" role="status">Choisis un niveau après le chargement.</span><span id="attempt">Bonne partie !</span></div>
+    </section>
+    <aside>
+      <section class="levels"><div class="section-label"><span>01 / LES NIVEAUX</span><span>3</span></div><h2>À toi de jouer.</h2><p>Commence au premier niveau ou choisis directement ton terrain de jeu.</p><div class="level-list"><button class="level" data-level="0" disabled><span class="level-number">01</span><span>Niveau 1<small>Le premier plongeon</small></span><span class="arrow">↗</span></button><button class="level" data-level="1" disabled><span class="level-number">02</span><span>Niveau 2<small>Garde le rythme</small></span><span class="arrow">↗</span></button><button class="level" data-level="2" disabled><span class="level-number">03</span><span>Niveau 3<small>Relève le défi</small></span><span class="arrow">↗</span></button></div><div class="progress-label"><span>Progression du niveau</span><strong id="progress-label">0 %</strong></div><progress id="progress" max="100" value="0" aria-label="Progression du niveau"></progress></section>
+      <section class="controls"><div class="section-label">02 / LES COMMANDES</div><div class="key-row"><span>Sauter / voler</span><span><kbd>A</kbd> <kbd>Espace</kbd></span></div><div class="key-row"><span>Pause</span><kbd>P</kbd></div><div class="key-row"><span>Recommencer</span><kbd>R</kbd></div><div class="key-row"><span>Retour au menu</span><kbd>Échap</kbd></div><button id="jump" class="jump" disabled>↑ Sauter</button><p class="touch-note">Tu peux aussi cliquer ou toucher la zone de jeu pour sauter.</p></section>
+    </aside>
+  </div>
+  <section class="about"><span class="section-label">03 / DERRIÈRE LE JEU</span><div><h2>Le même moteur.<br>Un nouveau terrain de jeu.</h2><p>Réalisé en équipe pendant ma Licence 2 Informatique, Géométrie Shark utilise C++ et SDL2 pour gérer les déplacements, les collisions et les niveaux. Cette version compile le code C++ en WebAssembly et reprend les images et les trois niveaux du dépôt.</p><p class="note">L’adaptation navigateur concerne le lancement, les commandes et la gestion des parties. Une musique électronique originale, « Shark Orbit », a été créée pour cette version. Elle démarre après le clic sur Jouer et se coupe avec le bouton Son ou la touche M.</p><a href="https://github.com/mohamed-boubaker/Licence-2-Project--/tree/main/geometrie-shark-cpp" target="_blank" rel="noopener">Explorer le projet sur GitHub ↗</a></div></section>
+</main>
+<footer><span>Mohamed Boubaker <span class="footer-dot">/</span> Projets universitaires</span><span>Adaptation navigateur réalisée avec l’aide de ChatGPT.</span></footer>
+<noscript>Active JavaScript pour charger le moteur WebAssembly et jouer.</noscript>
+<script src="music.js"></script>
+<script src="app.js"></script>
+<script async src="shark.js"></script>
+</body></html>
